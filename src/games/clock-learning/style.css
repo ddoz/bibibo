@@ -1,0 +1,325 @@
+/* ==========================================================================
+   MINI GAME 1: BELAJAR MEMBACA JAM STYLES (ENHANCED DUAL DRAGGABLE & BILINGUAL)
+   ========================================================================== */
+
+.clock-game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: 16px;
+}
+
+/* Top Controls Toolbar */
+.clock-toolbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--card-bg);
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--card-shadow);
+  border: 2px solid #FFFFFF;
+}
+
+.lang-toggle-group, .fmt-select-group {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn, .fmt-pill {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  border: 2px solid #E2E8F0;
+  background: white;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-btn.active, .fmt-pill.active {
+  background: var(--primary-purple);
+  color: white;
+  border-color: var(--primary-purple);
+  box-shadow: 0 3px 8px rgba(131, 56, 236, 0.3);
+}
+
+/* Mode Selection Header */
+.game-sub-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
+}
+
+.mode-tabs {
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 6px;
+  border-radius: var(--radius-full);
+  border: 2px solid #E2E8F0;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  border: none;
+  background: transparent;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+  background: var(--primary-pink);
+  color: white;
+  box-shadow: 0 4px 10px rgba(255, 93, 143, 0.3);
+}
+
+.level-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.level-pill {
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.85rem;
+  background: white;
+  border: 2px solid #E2E8F0;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.level-pill.active {
+  background: var(--primary-yellow);
+  color: #5D4037;
+  border-color: #FFB000;
+}
+
+/* Main Playing Card Layout */
+.clock-play-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--card-shadow);
+  border: 4px solid #FFFFFF;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.question-banner {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.question-title {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.voice-btn {
+  background: var(--primary-purple);
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(131, 56, 236, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.voice-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Analog Clock Top Controls (Sky & AM/PM) */
+.clock-controls-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.sky-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #E0F2FE;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  color: #0369A1;
+  border: 2px solid #BAE6FD;
+  font-size: 0.9rem;
+}
+
+.ampm-toggle-group {
+  display: flex;
+  gap: 6px;
+  background: #F1F5F9;
+  padding: 4px;
+  border-radius: var(--radius-full);
+}
+
+.ampm-btn {
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: none;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.ampm-btn.active {
+  background: var(--primary-blue);
+  color: white;
+  box-shadow: 0 2px 6px rgba(58, 134, 239, 0.3);
+}
+
+/* Analog Clock SVG Element */
+.analog-clock-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 6px 0 20px;
+}
+
+.analog-clock-svg {
+  width: 290px;
+  height: 290px;
+  touch-action: none;
+}
+
+.hand-group:hover circle {
+  filter: brightness(1.1);
+  transform: scale(1.15);
+  transform-origin: center;
+}
+
+.digital-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.digital-badge {
+  background: #2B2D42;
+  color: #06D6A0;
+  font-family: 'Fredoka', monospace;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 6px 22px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  letter-spacing: 2px;
+}
+
+.fmt-toggle-btn {
+  background: transparent;
+  border: 2px dashed #94A3B8;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.fmt-toggle-btn:hover {
+  border-color: var(--primary-purple);
+  color: var(--primary-purple);
+}
+
+/* Multiple Choice Grid */
+.choices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  width: 100%;
+  max-width: 620px;
+}
+
+.choice-btn {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 3px solid #E2E8F0;
+  background: white;
+  color: var(--text-dark);
+  cursor: pointer;
+  box-shadow: 0 6px 0px #CBD5E1;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.choice-btn:hover {
+  transform: translateY(-3px);
+  border-color: var(--primary-blue);
+  box-shadow: 0 9px 0px #CBD5E1;
+}
+
+.choice-btn.correct {
+  background: #D1FAE5 !important;
+  border-color: #10B981 !important;
+  color: #065F46 !important;
+  box-shadow: 0 6px 0px #059669 !important;
+}
+
+.choice-btn.wrong {
+  background: #FEE2E2 !important;
+  border-color: #EF4444 !important;
+  color: #991B1B !important;
+  box-shadow: 0 6px 0px #DC2626 !important;
+}
+
+@media (max-width: 600px) {
+  .analog-clock-svg {
+    width: 240px;
+    height: 240px;
+  }
+  
+  .choices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clock-toolbar-top {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
