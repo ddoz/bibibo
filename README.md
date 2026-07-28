@@ -160,7 +160,37 @@ Aplikasi ini dapat langsung di-deploy secara gratis ke **Cloudflare Pages**, **V
 
 ---
 
+## 🤝 Open Contribution & Komunitas
+
+Kami mengundang **developer, pendidik, desainer, dan kreator** untuk bergabung memajukan pendidikan anak usia dini berbasis teknologi web interaktif! Proyek **Bibibo** sepenuhnya bersifat *Open Source*.
+
+### 💡 Ide Mini-Game yang Bisa Kamu Buat:
+- 🔤 **Membaca & Abjad**: Mengenal huruf, menyusun kata, dan membaca kalimat sederhana.
+- ➕ **Matematika Dasar**: Berhitung benda, penjumlahan/pengurangan visual yang menyenangkan.
+- 🎨 **Mewarnai & Bentuk**: Mengenal warna, geometri, dan mengasah kreativitas motorik anak.
+- 🧩 **Logika & Puzzle**: Mencocokkan pola, memori kartu, dan teka-teki visual.
+- 🕌 **Hijaiyah & Doa**: Pembelajaran huruf Hijaiyah interaktif dan doa harian anak.
+- 🎵 **Musik & Lagu**: Bermain alat musik sederhana (pianika/xylophone) dan mengenal suara hewan.
+
+### 📋 Cara Berkontribusi:
+
+1. **Fork Repositori**: Klik button **Fork** di pojok kanan atas repositori `https://github.com/ddoz/bibibo`.
+2. **Buat Branch Fitur Baru**:
+   ```bash
+   git checkout -b feature/mini-game-nama-game
+   ```
+3. **Kembangkan Mini-Game**: Ikuti [Panduan Pengembangan Mini-Game Baru](#-panduan-pengembangan-mini-game-baru).
+4. **Commit & Push**:
+   ```bash
+   git commit -m "feat: menambah mini-game belajar mewarnai"
+   git push origin feature/mini-game-nama-game
+   ```
+5. **Buat Pull Request (PR)**: Ajukan Pull Request ke branch `main` repositori utama dengan deskripsi game dan screenshot/GIF fitur.
+
+---
+
 ## 📜 Lisensi
 
 Hak Cipta © 2026 **Bibibo Team**.  
 Proyek ini didistribusikan di bawah lisensi [MIT License](LICENSE).
+
