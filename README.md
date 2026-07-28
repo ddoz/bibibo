@@ -71,7 +71,7 @@ bibibo/
 
 1. **Clone repositori**:
    ```bash
-   git clone https://github.com/username/bibibo.git
+   git clone https://github.com/ddoz/bibibo.git
    cd bibibo
    ```
 
